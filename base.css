@@ -1,0 +1,29 @@
+/* Lab 4 base layer: simple browser-normalising rules. Box sizing is defined at the top of style.css for Lab 5 A6. */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Georgia, serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+}
+
+/* Kept from Lab 4 so DevTools can still demonstrate cascade/source order. */
+h1 {
+  color: black;
+}

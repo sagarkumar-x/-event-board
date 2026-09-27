@@ -1,0 +1,56 @@
+/* Optional dark theme. Load this after style.css when a dark presentation is required. */
+:root {
+  --brand: #d9a75e;
+  --brand-light: #2a2620;
+  --accent: rgb(242 196 109);
+  --accent-soft: hsl(39 50% 22%);
+  --ink: #f2f0ea;
+  --muted: #c3bfb6;
+  --paper: #14181a;
+  --surface: #201f1c;
+  --border: #665b4b;
+  --overlay: rgb(0 0 0 / 40%);
+  --link: #f2c46d;
+  --visited-link: #d7a8ee;
+  --active-link: #ff9b8d;
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+}
+
+.site-header {
+  background-color: var(--brand-light);
+}
+
+.site-header h1,
+.site-header p {
+  color: var(--brand);
+}
+
+.event,
+.sidebar section {
+  background-color: var(--brand-light);
+}
+
+.event mark {
+  background-color: var(--accent);
+  color: var(--paper);
+}
+
+input,
+textarea {
+  background-color: var(--surface);
+  color: var(--ink);
+}
+
+thead {
+  background-color: var(--brand);
+  color: var(--paper);
+}
+
+footer {
+  background-color: var(--brand-light);
+  color: var(--ink);
+}
