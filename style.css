@@ -63,7 +63,11 @@ body {
     "main"
     "sidebar"
     "footer";
+<<<<<<< HEAD
   gap: 0.5rem;
+=======
+  gap: 0;
+>>>>>>> 15107f9fdd167e31428ec08d2a119f95ee599314
 }
 
 h1,
@@ -155,10 +159,13 @@ figcaption {
   gap: var(--space-3) var(--space-5);
 }
 
+<<<<<<< HEAD
 .nav-links.is-open {
   display: flex;
 }
 
+=======
+>>>>>>> 15107f9fdd167e31428ec08d2a119f95ee599314
 /* B2/B6: primary navigation is its own grid region. */
 .primary-nav {
   grid-area: nav;
@@ -268,11 +275,14 @@ textarea {
   line-height: inherit;
 }
 
+<<<<<<< HEAD
 input[type="search"] {
   display: block;
   margin-block: var(--space-2) var(--space-4);
 }
 
+=======
+>>>>>>> 15107f9fdd167e31428ec08d2a119f95ee599314
 [type="email"],
 [type="date"] {
   border-color: var(--brand);
@@ -327,6 +337,7 @@ tbody tr:nth-child(even) {
   backdrop-filter: blur(12px);
 }
 
+<<<<<<< HEAD
 /* B4: category table has its own stable row spacing, visible borders, and scroll fallback. */
 #event-info {
   min-width: 0;
@@ -395,6 +406,8 @@ tbody tr:nth-child(even) {
   min-height: 1.5em;
 }
 
+=======
+>>>>>>> 15107f9fdd167e31428ec08d2a119f95ee599314
 /* A3: accent hover state also demonstrates rgb()/opacity-style transparency. */
 a:hover {
   color: var(--ink);
