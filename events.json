@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Orientation Day",
+    "date": "2026-12-05",
+    "time": "10:00 AM",
+    "venue": "Seminar Hall",
+    "description": "Welcome event for new students to learn about the campus, academic programs, facilities, clubs and student activities.",
+    "seats": 24,
+    "online": false
+  },
+  {
+    "title": "Tech Workshop",
+    "date": "2026-12-09",
+    "time": "2:00 PM",
+    "venue": "Computer Lab",
+    "description": "An interactive workshop where students can learn practical technology skills and explore new tools and technologies.",
+    "seats": 3,
+    "online": false
+  },
+  {
+    "title": "Sports Meet",
+    "date": "2026-12-11",
+    "time": "4:00 PM",
+    "venue": "College Sports Ground",
+    "description": "A campus sports event featuring various games and activities where students can participate, compete and showcase their sporting skills.",
+    "seats": 0,
+    "online": false
+  },
+  {
+    "title": "IIITV Hackathon",
+    "date": "2026-12-13",
+    "time": "9:00 AM",
+    "venue": "Seminar Hall",
+    "description": "A campus hackathon where students work together to build innovative solutions to real-world problems using technology.",
+    "seats": 12,
+    "online": true
+  }
+]

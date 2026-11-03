@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus Event Board - IIIT Vadodara</title>
+  <meta name="description" content="Campus Event Board for IIIT Vadodara. Find upcoming events, submit your own event, and check event categories.">
+  <link rel="icon" href="favicon.png">
+  <meta property="og:title" content="Campus Event Board - IIIT Vadodara">
+  <meta property="og:description" content="Find upcoming events, submit your own event, and stay updated with campus activities.">
+  <meta property="og:image" content="favicon.png">
+
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- Optional dark theme: load theme-dark.css after style.css when required. -->
+</head>
+
+<body>
+  <a href="#main" class="skip">Skip to content</a>
+
+  <!-- ================= HEADER / GRID AREA: HEADER ================= -->
+  <header class="site-header">
+    <h1>Campus Event Board</h1>
+    <p>Welcome to the Campus Event Board.</p>
+  </header>
+
+  <!-- ================= NAV / GRID AREA: NAV ================= -->
+  <nav class="primary-nav" aria-label="Primary">
+    <!-- B4: JavaScript toggles the mobile navigation and updates aria-expanded. -->
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-links">Menu</button>
+    <div class="nav-links" id="primary-links">
+      <a href="#events" class="active" aria-current="page">Upcoming Events</a>
+      <a href="#submit-event">Submit an Event</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ================= MAIN / GRID AREA: MAIN ================= -->
+  <main id="main">
+
+    <!-- ================= UPCOMING EVENTS ================= -->
+    <section id="events">
+      <h2>Upcoming Events</h2>
+
+      <label for="event-search">Search events</label>
+      <input type="search" id="event-search" name="event-search" placeholder="Search by name, venue, or format" autocomplete="off">
+      <p id="event-status" role="status" aria-live="polite">Loading events…</p>
+      <!-- B2: script.js builds every card from events.json and appends it here. -->
+      <div class="event-grid" id="event-list" aria-live="polite"></div>
+    </section>
+
+    <!-- B8: a valid RSVP form is required before a seat is reserved. -->
+    <section id="rsvp">
+      <h2>RSVP for an Event</h2>
+      <form id="rsvp-form" action="#rsvp" method="post" novalidate>
+        <p>
+          <label for="rsvp-name">Your Name</label><br>
+          <input type="text" id="rsvp-name" name="rsvp-name" minlength="2" pattern=".*\S.*" title="Enter at least two characters and do not use only spaces." required>
+        </p>
+        <p>
+          <label for="rsvp-email">Your Email</label><br>
+          <input type="email" id="rsvp-email" name="rsvp-email" placeholder="name@iiitvadodara.ac.in" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" title="Enter a valid email address." required>
+        </p>
+        <p>
+          <label for="rsvp-event">Event</label><br>
+          <select id="rsvp-event" name="rsvp-event" required>
+            <option value="" selected disabled>Choose an event</option>
+          </select>
+        </p>
+        <button type="submit">Confirm RSVP</button>
+        <p id="rsvp-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <!-- ================= SUBMIT EVENT FORM ================= -->
+    <section id="submit-event">
+      <h2>Submit an Event</h2>
+      <form id="event-form" action="#" method="post" novalidate>
+        <p>
+          <label for="event-name">Event Name</label><br>
+          <input type="text" id="event-name" name="event-name" minlength="2" pattern=".*\S.*" title="Enter at least two characters and do not use only spaces." required>
+        </p>
+        <p>
+          <label for="event-date">Event Date</label><br>
+          <input type="date" id="event-date" name="event-date" required>
+        </p>
+        <p>
+          <label for="event-email">Organizer Email</label><br>
+          <input type="email" id="event-email" name="event-email" placeholder="name@iiitvadodara.ac.in" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" title="Enter a valid email address, such as name@iiitvadodara.ac.in." required>
+        </p>
+        <p>
+          <label for="event-location">Event Location</label><br>
+          <input type="text" id="event-location" name="event-location" required>
+        </p>
+        <p>
+          <label for="event-description">Event Description</label><br>
+          <textarea id="event-description" name="event-description" rows="5" cols="40" placeholder="Briefly describe the event." required></textarea>
+        </p>
+        <button type="submit">Add Event</button>
+        <p id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about">
+      <h2>About Campus Event Board</h2>
+      <p><cite>Campus Event Board</cite> is a platform designed to help students stay updated with events and activities happening at IIIT Vadodara.</p>
+      <p>Students can discover coding competitions, hackathons, workshops, sports events, cultural programs, seminars and other campus activities in one place.</p>
+      <p>Visit the <a href="https://iiitvadodara.ac.in/">IIIT Vadodara website</a> for institute updates.</p>
+    </section>
+
+    <!-- ================= EVENT CATEGORIES TABLE ================= -->
+    <section id="event-info">
+      <h2>Event Categories</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Event Category</th>
+            <th>Typical Meeting Day</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Coding Competitions</td>
+            <td>Monday</td>
+          </tr>
+          <tr>
+            <td>Workshops</td>
+            <td>Wednesday</td>
+          </tr>
+          <tr>
+            <td>Sports Events</td>
+            <td>Friday</td>
+          </tr>
+          <tr>
+            <td>Cultural Programs</td>
+            <td>Saturday</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Have an event that you want to add to the Campus Event Board?</p>
+      <address>Email <a href="mailto:events@iiitvadodara.ac.in">events@iiitvadodara.ac.in</a></address>
+    </section>
+
+  </main>
+
+  <!-- ================= SIDEBAR / GRID AREA: SIDEBAR ================= -->
+  <aside class="sidebar" aria-label="Campus information">
+    <section id="announcements">
+      <h2>Announcements</h2>
+      <p>Check this page regularly for new campus events and announcements.</p>
+      <p class="later-message">This message is hidden with display: none for a later reveal.</p>
+    </section>
+
+    <section id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>Who can submit an event?</summary>
+        <p>Any registered student club or student can submit an event using the form above.</p>
+      </details>
+      <details>
+        <summary>How long does approval take?</summary>
+        <p>Submitted events are usually reviewed and listed within two working days.</p>
+      </details>
+    </section>
+  </aside>
+
+  <!-- ================= FOOTER / GRID AREA: FOOTER ================= -->
+  <footer>
+    <nav aria-label="Footer">
+      <a href="#events">Events</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <p>Campus Event Board &copy; 2026 | IIIT Vadodara</p>
+  </footer>
+
+  <!-- A1: defer runs the data and DOM logic after the document has been parsed. -->
+  <script src="script.js" defer></script>
+</body>
+</html>
